@@ -1,11 +1,7 @@
-from __future__ import annotations
-
-from typing import Dict
-
 from fractured_light.models import District, Identity, SystemState, WorldState
 
 
-def default_identities() -> Dict[str, Identity]:
+def default_identities() -> dict[str, Identity]:
     return {
         "Ari": Identity(
             name="Ari",
