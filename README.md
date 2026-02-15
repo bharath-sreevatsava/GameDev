@@ -23,17 +23,3 @@ PYTHONPATH=src python -m fractured_light.main
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
-
-## Run on Windows
-
-Use the included launcher scripts from the repository root:
-
-```bat
-run_game.bat
-```
-
-To run tests on Windows:
-
-```bat
-run_tests.bat
-```

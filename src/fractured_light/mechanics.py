@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from random import Random
-from typing import Optional
 
 from fractured_light.content import default_identities
 from fractured_light.models import MissionResult, SystemState, WorldState
@@ -17,7 +16,7 @@ class SwitchResult:
 IDENTITIES = default_identities()
 
 
-def attempt_switch(system: SystemState, target: str, *, rng: Optional[Random] = None) -> SwitchResult:
+def attempt_switch(system: SystemState, target: str, *, rng: Random | None = None) -> SwitchResult:
     if target not in IDENTITIES:
         return SwitchResult(False, f"Unknown identity: {target}")
     if target in system.consent_locks:
